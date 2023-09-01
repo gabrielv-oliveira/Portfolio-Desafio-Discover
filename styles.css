@@ -1,0 +1,294 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+:root {
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+  --limon: #00ff00;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+sub {
+  font-size: 13px;
+}
+
+.icon {
+  color: #000;
+  opacity: 0.1;
+  font-size: 2rem;
+  margin: 5px; /* Espaçamento entre os ícones */
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 3rem;
+}
+
+.left {
+  display: grid;
+  row-gap: 1rem;
+
+  width: 348px;
+
+  flex-wrap: wrap;
+}
+
+.profile,
+.contact,
+.techs,
+.exp,
+.edu {
+  background-color: var(--bg-cards);
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.profile p{
+  text-align: center;
+}
+
+.profileImg {
+  width: 128px;
+  border: var(--limon) 2px solid;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.profileImg:hover {
+  transform: scale(1.1);
+}
+
+.contacts {
+  margin-top: 5rem;
+}
+
+.ulContacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.liContacts {
+  display: inline-flex;
+  gap: 1rem;
+  font-weight: 300;
+  font-size: 13px;
+  align-items: center;
+}
+
+.liContacts img:hover,
+.liContacts a:hover,
+.liContacts:hover {
+  color: var(--bg-techs);
+  transform: scale(1.1);
+  margin-left: 7px;
+}
+
+.navTechs {
+  display: flex;
+  margin-top: 0.8rem;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.navTechs i {
+  color: var(--bg-techs);
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navTechs i:hover {
+  color: var(--limon);
+  transform: scale(1.1);
+}
+
+.ulExp,
+.ulEdu {
+  display: grid;
+  margin-top: 0.5rem;
+  padding-left: 2.5rem;
+  row-gap: 1.5rem;
+}
+
+.liExp,
+.liEdu {
+  list-style: disc;
+  color: var(--text-color);
+}
+
+.liExp li,
+.liEdu li {
+  font-weight: 200;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  width: 72%;
+  margin-right: 20px;
+}
+
+.projects,
+.project1,
+.posts,
+.post {
+  background-color: var(--bg-cards);
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.projects {
+  padding: 2rem;
+}
+
+.titleProj {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects h2 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.allProject {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pj {
+  display: grid;
+  row-gap: 1rem;
+  width: 49%;
+}
+
+.pj p {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pj b {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.end {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+}
+
+.post {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.post img {
+  align-self: self-start;
+}
+
+.texts {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.tags {
+  display: flex;
+  gap: 2rem;
+}
+
+.grid-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: moveGrid 5s linear infinite;
+}
+
+.line.vertical {
+  transform-origin: top left;
+  animation: moveGrid 5s linear infinite, rotateGrid 10s linear infinite;
+}
+
+@keyframes moveGrid {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rotateGrid {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
