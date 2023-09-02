@@ -35,6 +35,24 @@ sub {
   font-size: 13px;
 }
 
+
+@media (max-width: 1288px) {
+ .main {
+  justify-content: center;
+  padding: 2rem;
+ }
+  .left, .right, .pj{
+  margin-bottom: 1rem;
+  width: 100% !important;
+  padding: 0;
+ }
+
+ .pj {
+   margin-top: 1rem;
+ }
+
+}
+
 .icon {
   color: #000;
   opacity: 0.1;
@@ -45,7 +63,7 @@ sub {
 .main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-top: 3rem;
 }
 
@@ -159,8 +177,8 @@ sub {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
-  width: 72%;
-  margin-right: 20px;
+  width: 70vw;
+  
 }
 
 .projects,
@@ -192,13 +210,13 @@ sub {
 .allProject {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 1rem;
 }
 
 .pj {
   display: grid;
   row-gap: 1rem;
-  width: 49%;
+  width: 34vw;
 }
 
 .pj p {
