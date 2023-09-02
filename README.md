@@ -15,7 +15,7 @@ In this challenge, I created a web page that serves as my portfolio and resume. 
 
 ## 🌐 Access
 
-You can access my portfolio [here](https://your-project-link).
+You can access my portfolio [here](https://splendorous-pie-6c1689.netlify.app/).
 
 ## 📩 Contact
 
